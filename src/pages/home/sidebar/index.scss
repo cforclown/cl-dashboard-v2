@@ -1,0 +1,8 @@
+@import "~react-pro-sidebar/dist/scss/styles.scss";
+
+#home-sidebar {
+    height: 100%;
+}
+#home-sidebar.home-sidebar-hidden {
+    display: none;
+}
