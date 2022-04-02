@@ -8,7 +8,7 @@ import "./index.scss";
 
 function Content() {
     return (
-        <div id="home-content">
+        <div id="cl-home-content">
             <React.Suspense fallback={Loader}>
                 <Switch>
                     <Redirect exact from="/" to="/dashboard" />

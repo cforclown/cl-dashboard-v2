@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import Sidebar from "./sidebar";
 import Header from "./header";
 import Content from "./content";
+import Footer from "./footer";
 
 import { ShowSidebar, HideSidebar, CollapseSidebar, UncollapseSidebar } from "../../reducer/actions";
 
@@ -61,24 +62,25 @@ function Home() {
         dispatch(UncollapseSidebar());
     }
     function showSidebar(uncollapseSidebar = true) {
-        sidebarWrapperRef.current.classList.add("home-sidebar-wrapper-show");
+        sidebarWrapperRef.current.classList.add("cl-home-sidebar-wrapper-show");
         dispatch(ShowSidebar(uncollapseSidebar));
     }
     function hideSidebar() {
-        sidebarWrapperRef.current.classList.remove("home-sidebar-wrapper-show");
+        sidebarWrapperRef.current.classList.remove("cl-home-sidebar-wrapper-show");
         dispatch(HideSidebar());
     }
 
     return (
-        <div id="home">
-            <div ref={sidebarWrapperRef} id="home-sidebar-wrapper">
+        <div id="cl-home">
+            <div ref={sidebarWrapperRef} id="cl-home-sidebar-wrapper">
                 <Sidebar hidden={sidebarStatus.hidden} collapsed={sidebarStatus.collapsed} />
-                <div className="home-sidebar-overlay" onClick={hideSidebar} />
+                <div className="cl-home-sidebar-overlay" onClick={hideSidebar} />
             </div>
 
-            <div className="home-wrapper">
+            <div className="cl-home-wrapper">
                 <Header onToggleSidebar={onToggleSidebar} />
                 <Content />
+                <Footer />
             </div>
         </div>
     );

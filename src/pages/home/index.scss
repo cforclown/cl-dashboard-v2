@@ -1,11 +1,16 @@
-#home {
-    overflow: hidden;
+#cl-home {
+    position: relative;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
 
-    #home-sidebar-wrapper {
+    height: 100vh;
+    overflow: hidden;
+
+    background-color: #ddddff;
+
+    #cl-home-sidebar-wrapper {
         display: flex;
         flex-direction: row;
         height: 100vh;
@@ -19,28 +24,32 @@
             display: none;
         }
 
-        .home-sidebar-overlay {
+        .cl-home-sidebar-overlay {
             display: none;
         }
     }
-    #home-sidebar-wrapper.home-sidebar-wrapper-show {
+    #cl-home-sidebar-wrapper.cl-home-sidebar-wrapper-show {
         @media screen and (max-width: 576px) {
             display: flex;
             flex-direction: row;
             z-index: 100;
         }
-        .home-sidebar-overlay {
+        .cl-home-sidebar-overlay {
             display: flex;
             flex-grow: 10;
-            background-color: rgba($color: #000000, $alpha: 0.5);
+            background-color: rgba($color: black, $alpha: 0.5);
         }
     }
 
-    .home-wrapper {
-        width: 100%;
+    .cl-home-wrapper {
+        position: relative;
+        height: 100%;
+
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
+
+        width: 100%;
     }
 }

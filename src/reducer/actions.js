@@ -15,6 +15,13 @@ export function DeleteSession() {
     };
 }
 
+export function UpdateUser(user) {
+    return { 
+      type: ActionTypes.UPDATE_USER,
+      param: { user } 
+    };
+}
+
 export function ShowSidebar(uncollapsed = false) {
     return {
         type: ActionTypes.SHOW_SIDEBAR,

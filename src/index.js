@@ -11,6 +11,7 @@ import * as ServiceWorker from "./ServiceWorker";
 
 import "./polyfill";
 
+import "./index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./assets/icon";
 
