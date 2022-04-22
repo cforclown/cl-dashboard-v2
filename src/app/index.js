@@ -8,6 +8,7 @@ import { SetSession } from "../reducer/actions";
 import { getSession } from "../utils/session-manager";
 import "./index.scss";
 import 'react-toastify/dist/ReactToastify.css';
+import 'react-base-table/styles.css';
 
 
 const Login = React.lazy(() => import("../pages/auth/login"));

@@ -6,7 +6,8 @@ export async function getUser(userId) {
   return apiRequest(baseUrl + `/${userId}`);
 }
 
-export async function findUSers(query, pagination) {
+export async function findUsers(query, pagination) {
+  console.log(query, pagination);
   return apiRequest(baseUrl + '/find', {
     method: 'POST',
     body: JSON.stringify({ query, pagination })

@@ -2,7 +2,7 @@ import React from "react";
 
 const Dashboard = React.lazy(() => import("./views/dashboard"));
 const Users = React.lazy(() => import("./views/users"));
-const UsersCreateEdit = React.lazy(() => import("./views/users/create-edit"));
+const CreateEditUser = React.lazy(() => import("./views/users/create-edit"));
 const Roles = React.lazy(() => import("./views/roles"));
 const Profile = React.lazy(() => import("./views/profile"));
 const ContentNotFound = React.lazy(() => import("./views/content-not-found"));
@@ -25,7 +25,7 @@ const routes = [
     component: Dashboard
   },
   { path: "/master-data/users", exact: false, name: "Users", component: Users },
-  { path: "/master-data/users/create-edit/:userId", exact: false, name: "Users", component: UsersCreateEdit },
+  { path: "/master-data/users/create-edit/:userId", exact: false, name: "Users", component: CreateEditUser },
   { path: "/master-data/roles", exact: false, name: "Roles", component: Roles },
   { path: "/profile", exact: false, name: "Profile", component: Profile },
 
